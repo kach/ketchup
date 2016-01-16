@@ -97,8 +97,8 @@ app.get('/api/:url/:start/:interval/', function (req, res) {
 });
 
 app.use(express.static(__dirname + '/static'));
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen((process.env.PORT || 3000), function () {
+  console.log('Listening on port: ' + (process.env.PORT || 3000));
 });
 
 // curl http://localhost:3000/api/http%3A%2F%2Fhardmath123.github.io%2Ffeed.xml/1452976795/57/
